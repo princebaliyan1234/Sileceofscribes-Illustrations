@@ -1,0 +1,60 @@
+.Home_page1{
+    width: 100%;
+  height: calc(100dvh - 60px);
+  overflow: hidden;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/page1.jpeg");
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.Home_page2{
+    width: 100%;
+  height: calc(100dvh - 60px);
+  overflow: hidden;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/page2.jpg");
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.Home_page3{
+    width: 100%;
+  height: calc(100dvh - 60px);
+  overflow: hidden;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/page3.jpg");
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.Home_page4{
+    width: 100%;
+  height: calc(100dvh - 60px);
+  overflow: hidden;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/page4.jpg");
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.Home_page5{
+    width: 100%;
+  height: calc(100dvh - 60px);
+  overflow: hidden;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/page5.jpg");
+       background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
