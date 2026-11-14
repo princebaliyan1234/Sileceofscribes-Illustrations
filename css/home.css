@@ -1,60 +1,134 @@
+/* ===== SCREEN 1: HERO ===== */
 .Home_page1{
-    width: 100%;
-  height: calc(100dvh - 60px);
-  overflow: hidden;
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/page1.jpeg");
-       background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+    width:100%;height:calc(100dvh - 60px);overflow:hidden;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../Assets/opt/page1.webp") center/cover no-repeat;
 }
-.Home_page2{
-    width: 100%;
-  height: calc(100dvh - 60px);
-  overflow: hidden;
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/page2.jpg");
-       background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+.Content1{display:grid;grid-template-columns:1fr 1fr;height:100%}
+.clmn1{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;padding:60px;background:rgba(0,0,0,.5)}
+.Head1{font-family:var(--font-head);font-weight:400;font-size:clamp(2.5rem,4vw,4.5rem);line-height:1.1}
+.Head1 span{color:var(--violet-soft)}
+.cnt1{max-width:540px;color:var(--lilac);font-size:1.1rem;line-height:1.8}
+.buttons{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px}
+.contact,.cover{display:inline-block;padding:14px 24px;border-radius:6px;text-decoration:none;transition:background-color .2s}
+.contact{background:var(--violet);border:1px solid var(--violet)}
+.contact:hover{background:var(--violet-deep);border-color:var(--violet-deep)}
+.cover{border:1px solid var(--violet-soft)}
+.cover:hover{background:rgba(159,94,165,.25)}
+
+/* ===== SCREEN 2: SHOWCASE (4 snap steps, one stays pinned) ===== */
+.showcase{display:grid}
+.sc-stage,.sc-steps{grid-area:1/1}
+.sc-stage{position:sticky;top:60px;align-self:start;z-index:1;height:calc(100dvh - 60px);padding:18px 20px 20px;display:grid;grid-template-columns:1fr 130px;gap:16px;background:var(--black)}
+.sc-steps{pointer-events:none}
+.sc-step{height:calc(100dvh - 60px);}
+.sc-main{display:grid;grid-template-rows:auto minmax(0,1fr);gap:14px;min-height:0}
+.sc-title{font-family:var(--font-head);font-weight:300;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-size:clamp(2.4rem,10vh,6.5rem)}
+
+.sc-tiles{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);min-height:0}
+.tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:14px;min-height:0;overflow:hidden;text-decoration:none;border-right:1px solid var(--line)}
+.tile:last-child{border-right:0}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.9);transition:filter .4s,transform .6s}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.85));pointer-events:none}
+.tile:hover img,.tile:focus-visible img{filter:brightness(1) saturate(1.05);transform:scale(1.05)}
+.t-top,.t-bot{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.t-top b{font-family:var(--font-head);font-weight:400;font-size:1.15rem}
+.t-top i{font-style:normal;font-size:.7rem;color:var(--lilac)}
+.t-bot em{font-style:normal;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;padding:4px 10px;border-radius:99px;background:var(--white);color:var(--black)}
+.t-bot span{font-size:.75rem;color:var(--lilac)}
+
+/* Side panel: rows are fixed, only the top row (the word) is flexible, so nothing below ever moves */
+.sc-panel{display:grid;grid-template-rows:minmax(0,1fr) auto auto auto;justify-items:center;gap:18px;padding:18px 0;border:1px solid var(--line);border-radius:18px;background:#0b0b0b;min-height:0;overflow:hidden}
+.sc-cat{align-self:start;min-height:0;overflow:hidden;writing-mode:vertical-rl;font-family:var(--font-head);font-weight:300;font-size:clamp(1.4rem,4.4vh,3rem);text-transform:uppercase;line-height:1;white-space:nowrap}
+.sc-plus{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:var(--violet);color:var(--white);text-decoration:none;font-size:2.6rem;font-weight:300;box-shadow:0 0 40px rgba(126,50,133,.6);transition:background .2s,transform .3s}
+.sc-plus:hover{background:var(--violet-soft);transform:rotate(90deg)}
+.sc-arrows{display:flex;gap:8px}
+.sc-arrows button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--white);cursor:pointer;display:grid;place-items:center}
+.sc-arrows button:hover{border-color:var(--violet-soft)}
+.sc-count{writing-mode:vertical-rl;font-size:.8rem;letter-spacing:.1em;color:rgba(255,255,255,.6)}
+
+/* ===== SCREENS 3 + 4: HORIZONTAL TRACKS (each scroll slides one card) ===== */
+.hpin{display:grid}
+.hstage,.hsteps{grid-area:1/1}
+.hstage{position:sticky;top:60px;align-self:start;z-index:1;height:calc(100dvh - 60px);padding:18px 20px 22px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:18px;background:var(--black);overflow:hidden}
+.hsteps{pointer-events:none}
+.hstep{height:calc(100dvh - 60px)}
+.h-title{font-family:var(--font-head);font-weight:300;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-size:clamp(2.4rem,10vh,6.5rem)}
+.hview{overflow:hidden;min-height:0}
+.htrack{display:flex;gap:16px;height:100%;align-items:center;transition:transform .8s cubic-bezier(.65,0,.35,1)}
+.hcard{flex:0 0 calc((100% - (var(--v) - 1) * 16px) / var(--v));height:min(100%,480px);display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:clamp(20px,4vh,36px);border:1px solid var(--line);border-radius:18px;background:#0b0b0b;transition:border-color .3s,box-shadow .3s}
+.hcard:hover{border-color:var(--violet-soft);box-shadow:0 0 40px rgba(126,50,133,.35)}
+.hcard.ph{border-style:dashed}
+.hcard i,.hcard blockquote{margin-bottom:auto}
+.hcard i{font-style:normal;font-size:.75rem;letter-spacing:.1em;color:var(--lilac)}
+.hcard h3{font-family:var(--font-head);font-weight:400;font-size:clamp(1.3rem,3.6vh,2rem);line-height:1.15}
+.hcard p,.hcard blockquote{color:rgba(255,255,255,.78);line-height:1.7;font-size:clamp(.95rem,2.2vh,1.1rem)}
+.hcard blockquote{font-family:var(--font-head);font-weight:300;font-size:clamp(1.3rem,3.6vh,2rem);line-height:1.3;color:var(--white)}
+.hcard figcaption{display:flex;flex-direction:column;gap:4px}
+.hcard figcaption span{font-size:.8rem;color:var(--lilac)}
+.hbar{height:2px;background:var(--line)}
+.hbar i{display:block;height:100%;width:0;background:var(--violet-soft);transition:width .8s}
+
+/* ===== SCREEN 5: BUY CTA ===== */
+.cta{height:calc(100dvh - 60px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;padding:40px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("../Assets/opt/page2.webp") center/cover no-repeat}
+.cta-title{font-family:var(--font-head);font-weight:300;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-size:clamp(2.4rem,11vh,7rem)}
+.cta p{max-width:520px;color:var(--lilac);line-height:1.7}
+.cta .buttons{justify-content:center}
+
+/* ===== MOBILE: no snapping, tiles swap with the arrows ===== */
+@media(max-width:800px){
+    .Home_page1,.Content1{height:auto;min-height:calc(100dvh - 60px)}
+    .Content1{grid-template-columns:1fr}
+    .clmn2{display:none}
+    .clmn1{padding:32px 20px;min-height:calc(100dvh - 60px)}
+    .sc-steps{display:none}
+    .sc-stage{position:static;height:auto;grid-template-columns:1fr}
+    .sc-tiles{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px}
+    .tile:nth-child(2n){border-right:0}
+    .tile:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .sc-panel{grid-template-rows:none;grid-template-columns:1fr auto auto auto;align-items:center;padding:12px 16px}
+    .sc-cat,.sc-count{writing-mode:horizontal-tb}
+    .sc-cat{font-size:1.4rem}
+    .sc-plus{width:56px;height:56px;font-size:1.8rem}
 }
-.Home_page3{
-    width: 100%;
-  height: calc(100dvh - 60px);
-  overflow: hidden;
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/page3.jpg");
-       background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+
+@media(max-width:800px){
+    .hsteps{display:none}
+    .hstage{position:static;height:auto;min-height:calc(100dvh - 60px)}
+    .hview{overflow-x:auto;scroll-snap-type:x mandatory}
+    .htrack{transform:none!important;height:auto}
+    .hcard{flex:0 0 82%;scroll-snap-align:start}
+    .hbar{display:none}
+    .cta{height:auto;min-height:calc(100dvh - 60px)}
 }
-.Home_page4{
-    width: 100%;
-  height: calc(100dvh - 60px);
-  overflow: hidden;
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/page4.jpg");
-       background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
-.Home_page5{
-    width: 100%;
-  height: calc(100dvh - 60px);
-  overflow: hidden;
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/page5.jpg");
-       background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
+
+/* ===== BACKGROUND IMAGES for "What authors say" and "Questions, answered" =====
+   AUTHORS BG IMAGE: change page3.webp below.   FAQ BG IMAGE: change page4.webp below.
+   The first rgba(0,0,0,.5) is the dark overlay that keeps the text readable: .35 = brighter image, .7 = darker. */
+#say .hstage{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../Assets/opt/page3.webp") center/cover no-repeat}
+#faq .hstage{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../Assets/opt/page4.webp") center/cover no-repeat}
+/* cards become slightly see-through so the image shows around the text (raise .7 toward 1 for solid cards) */
+#say .hcard,#faq .hcard{background:rgba(8,8,8,.7)}
+
+/* ===== HERO ADDITIONS: dot-grid canvas, one-line about, "We make covers for" row ===== */
+.Home_page1{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.Content1,.plat{position:relative;z-index:1}
+.hero-about{display:flex;align-items:center;gap:var(--s3,12px);color:var(--lilac);font-size:1rem;line-height:1.5}
+.hero-about::before{content:"";flex:0 0 32px;height:1px;background:var(--violet-soft)}
+
+/* Dot grid over the WHOLE hero: the dark panel is now part of the background (under the grid), covering the FULL hero evenly.
+   --hero-dim = how dark the whole hero is (0 = no dark layer, 1 = black). Lower it to show more of the artwork. */
+.clmn1{background:none}
+.Home_page1{--hero-dim:.75;background:linear-gradient(rgba(0,0,0,var(--hero-dim)),rgba(0,0,0,var(--hero-dim))),url("../Assets/opt/page1.webp") center/cover no-repeat}
+
+/* "We make covers for" stays fixed on the left; the names scroll forever on the right (JS repeats them so the loop never shows a gap) */
+.plat{display:flex;align-items:center;overflow:hidden;padding:var(--s4,16px) 0;background:rgba(0,0,0,.55);border-top:1px solid var(--line)}
+.plat-lead,.marquee-track span{font-family:var(--font-head);font-weight:300;font-size:clamp(.8rem,1.9vh,1rem);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.plat-lead{flex:none;padding:0 var(--s6,32px) 0 var(--s5,24px);margin-right:var(--s2,8px);border-right:1px solid var(--line);color:var(--lilac)}
+.marquee{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee var(--mq-time,40s) linear infinite}
+.marquee-track span{display:flex;align-items:center}
+.marquee-track span::after{content:"";width:5px;height:5px;margin:0 var(--s7,48px);border-radius:50%;background:var(--violet-soft)}
+.plat:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none;width:auto;flex-wrap:wrap;row-gap:var(--s2,8px)}}
+@media(max-width:800px){.plat{flex-direction:column;align-items:flex-start;gap:var(--s2,8px)}.plat-lead{border-right:0;margin-right:0}.marquee{width:100%}}
