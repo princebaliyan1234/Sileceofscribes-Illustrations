@@ -3,44 +3,227 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css\Basic-css.css" />
-    <link rel="stylesheet" href="../css\home.css">
+    <script>try{if(sessionStorage.getItem("arrive")){document.documentElement.classList.add("arriving");sessionStorage.removeItem("arrive")}}catch(e){}</script>
+    <title>Silence of Scribes | Illustrated Covers for Web Novels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&family=Manrope:wght@400;500;600&family=Cinzel:wght@500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Basic-css.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/interactive.css" />
+    <link rel="stylesheet" href="../css/books.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/spacing.css" />
   </head>
   <body>
-    <div class="navbar">
+    <header class="navbar">
       <nav>
-        <span>
-          <a class="Logo" href="home.html">
-            <img class="logo" src="..\Assets\Logo.png" alt="logo" />
-          </a>
-        </span>
+        <a class="Logo" href="Home.html" aria-label="Silence of Scribes, home"><img class="logo" src="../Assets/opt/Logo.webp" alt="Silence of Scribes" /></a>
         <div class="center_pages">
-
-            <span>
-                <a href="Home.html">Home</a>
-            </span>
-            <span>
-                <a href="Covers.html">Covers</a>
-            </span>
-            <span>
-                <a href="Pricing.html">Pricing</a>
-            </div>
-        </span>
-        <span>
-          <a href="Contact.html">Contact Us</a>
-        </span>
+          <a href="Home.html" aria-current="page">Home</a>
+          <a href="Portfolio.html">Portfolio</a>
+          <a href="Pricing.html">Pricing</a>
+          <a href="Trust.html">Trust</a>
+        </div>
+        <a class="order" href="Order.html"><span class="o-long">Order a cover</span><span class="o-short">Order</span></a>
       </nav>
-    </div>
+    </header>
 
-    <section>
-      <div class="Home_page1">
-        
-      </div>
-      <div class="Home_page2"></div>
-      <div class="Home_page3"></div>
-      <div class="Home_page4"></div>
-      <div class="Home_page5"></div>
-    </section>
+    <main>
+      <section class="Home_page1">
+        <canvas class="warp" aria-hidden="true"></canvas>
+        <div class="Content1">
+          <div class="clmn1">
+            <p class="hero-about">Silence of Scribes is an illustration agency for web novel and light novel authors.</p>
+            <h1 class="Head1">Your Story <span>Deserves</span> a World of Its Own.</h1>
+            <p class="cnt1">Custom illustrated book covers that bring your characters, worlds, and wildest ideas to life. Let's create something that makes readers stop, look, and fall into your story.</p>
+            <div class="buttons">
+              <a class="contact" href="Order.html">Let's Create Your Cover</a>
+              <a class="cover" href="Portfolio.html">See My Portfolio</a>
+            </div>
+          </div>
+          <div class="clmn2">
+          <div class="hero-books">
+            <div class="b3" style="--x:calc(var(--bw) * -.98);--y:calc(var(--bh) * .07);--s:.86;--ry:16;--z:1;--d:1;--spine:#a63a00">
+              <div class="b3-in">
+                <img class="b3-front" src="../Assets/covers/talentless-perspective.webp" alt="Talentless Perspective cover" />
+                <span class="b3-spine"><i>Talentless Perspective</i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span>
+              </div>
+            </div>
+            <div class="b3" data-fly="cold-steel-mac" style="--x:0px;--y:calc(var(--bh) * -.04);--s:1.06;--ry:16;--z:3;--d:0;--spine:#2b1346">
+              <div class="b3-in">
+                <img class="b3-front" src="../Assets/covers/cold-steel-mac.webp" alt="Cold Steel Mac cover" />
+                <span class="b3-spine"><i>Cold Steel Mac</i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span>
+              </div>
+            </div>
+            <div class="b3" style="--x:calc(var(--bw) * .98);--y:calc(var(--bh) * .09);--s:.86;--ry:16;--z:2;--d:2;--spine:#4a0e16">
+              <div class="b3-in">
+                <img class="b3-front" src="../Assets/covers/lapsed-lease.webp" alt="Lapsed Lease cover" />
+                <span class="b3-spine"><i>Lapsed Lease</i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="plat" role="img" aria-label="We make covers for Royal Road, Tapas, Webnovel, Scribble Hub, Light Novel, IngramSpark and Illustration">
+          <span class="plat-lead" aria-hidden="true">We make covers for</span>
+          <div class="marquee">
+            <div class="marquee-track" aria-hidden="true">
+              <span>Royal Road</span>
+              <span>Tapas</span>
+              <span>Webnovel</span>
+              <span>Scribble Hub</span>
+              <span>Light Novel</span>
+              <span>IngramSpark</span>
+              <span>Illustration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shelf-screen" id="shelf" aria-label="Cover showcase">
+        <p class="shelf-hint">Click on the books to see the magic</p>
+        <div class="bookcase">
+          <div class="comp"><noscript><a href="Portfolio.html">See the portfolio</a></noscript></div>
+          <div class="comp"></div>
+        </div>
+      </section>
+
+      <section class="hpin" id="chars" aria-label="Character design and typography">
+        <div class="hstage hstage--panels">
+          <div class="hview"><div class="htrack" style="--v:1">
+            <div class="panel" data-ghost="Characters">
+              <div class="panel-head">
+                <p class="panel-kicker">02 — Characters</p>
+                <h2 class="h-title">Character design</h2>
+                <p class="panel-copy">Full-colour characters drawn to sit naturally with your cover art and your story’s world.</p>
+                <p class="panel-hint">Hover a card and the character steps out</p>
+                <a class="panel-link" href="Pricing.html">See packages <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="cards">
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page3.webp);--art:url(../Assets/covers/cold-steel-mac.webp);--pos:90% 37%;--zoom:220%"><div class="c-art" role="img" aria-label="Character from Cold Steel Mac"></div><figcaption>Cold Steel Mac</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page4.webp);--art:url(../Assets/covers/talentless-perspective.webp);--pos:54% 32%;--zoom:190%"><div class="c-art" role="img" aria-label="Character from Talentless Perspective"></div><figcaption>Talentless Perspective</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page5.webp);--art:url(../Assets/covers/lapsed-lease.webp);--pos:0% 59%;--zoom:200%"><div class="c-art" role="img" aria-label="Character from Lapsed Lease"></div><figcaption>Lapsed Lease</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page2.webp);--art:url(../Assets/covers/first-date-oblivion.webp);--pos:50% 15%;--zoom:200%"><div class="c-art" role="img" aria-label="Character from First Date: Oblivion"></div><figcaption>First Date: Oblivion</figcaption></figure>
+              </div>
+            </div>
+            <div class="panel" data-ghost="Typography">
+              <div class="panel-head">
+                <p class="panel-kicker">03 — Typography</p>
+                <h2 class="h-title">Typography</h2>
+                <p class="panel-copy">Title lettering built around your genre and your cover’s colours, and kept consistent across a series.</p>
+                <p class="panel-hint">Click a title to open it</p>
+                <a class="panel-link" href="Pricing.html">See packages <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="cards cards--type">
+                <figure class="tcard" data-title="cold-steel-mac" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/cold-steel-mac.webp" alt="Cold Steel Mac title lettering" loading="lazy" /><figcaption>Cold Steel Mac</figcaption></figure>
+                <figure class="tcard" data-title="talentless-perspective" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/talentless-perspective.webp" alt="Talentless Perspective title lettering" loading="lazy" /><figcaption>Talentless Perspective</figcaption></figure>
+                <figure class="tcard" data-title="lapsed-lease" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/lapsed-lease.webp" alt="Lapsed Lease title lettering" loading="lazy" /><figcaption>Lapsed Lease</figcaption></figure>
+                <figure class="tcard" data-title="first-date-oblivion" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/first-date-oblivion.webp" alt="First Date: Oblivion title lettering" loading="lazy" /><figcaption>First Date: Oblivion</figcaption></figure>
+                <figure class="tcard" data-title="soldier-system" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/soldier-system.webp" alt="Soldier System title lettering" loading="lazy" /><figcaption>Soldier System</figcaption></figure>
+                <figure class="tcard" data-title="pirate-archmage-pee-za-sauce" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/pirate-archmage-pee-za-sauce.webp" alt="Pirate Archmage Pee Za Sauce title lettering" loading="lazy" /><figcaption>Pirate Archmage Pee Za Sauce</figcaption></figure>
+              </div>
+            </div>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+      <section class="hpin" id="say" aria-label="What authors say">
+        <div class="hstage">
+          <h2 class="h-title">What authors say</h2>
+          <div class="hview"><div class="htrack">
+            <figure class="hcard rcard" data-book="first-date-oblivion" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#1c3550"><div class="b3-in"><img class="b3-front" src="../Assets/covers/first-date-oblivion.webp" alt="First Date: Oblivion cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of First Date: Oblivion</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>I'm an author, not an artist, so I didn't quite know what I wanted except that it should invoke optimism, a sense of adventure, and of course look good. I gave a ton of detail with my order, and the artist transformed my random thoughts into something I’d wanted all along but could never quite describe. I don't think I could have done a better job even if I had a magic wand. This was a collaborative effort. He listened to my vision but incorporated his expertise to create a kind of blend of the two. We're from separate time zones, but that didn't really slow communication as much as I'd expected. He was very polite. Our one main issue was that the original draft came out too dark, but we problem-solved and came up with a great solution. If you need multiple small revisions, I'd say to plan for a week- or two-longer delivery date so that the artist doesn't have to rush. I am extremely happy with the entire process and the end result</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+            <figure class="hcard rcard" data-book="soldier-system" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#1d3a00"><div class="b3-in"><img class="b3-front" src="../Assets/covers/soldier-system.webp" alt="Soldier System cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of Soldier System</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>The order was handled professionally and promptly. The artist nailed exactly what I was looking for and I couldn't be happier! This was my first commission, so I was nervous and Prince made it effortless and delivered a product I'm satisfied with. Highly recommend for anyone working on a serialized fiction!</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+            <figure class="hcard rcard" data-book="pirate-archmage-pee-za-sauce" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#7a1a12"><div class="b3-in"><img class="b3-front" src="../Assets/covers/pirate-archmage-pee-za-sauce.webp" alt="Pirate Archmage Pee Za Sauce cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of Pirate Archmage Pee Za Sauce</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>A wonderful artist that listed to all of my ideas and took them into account. They even suggested ways to improve it that made the overall piece far better. A very quick turnaround time and attention to detail! I would definitely recommend working with them!</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+            <figure class="hcard rcard" data-book="talentless-perspective" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#a63a00"><div class="b3-in"><img class="b3-front" src="../Assets/covers/talentless-perspective.webp" alt="Talentless Perspective cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of Talentless Perspective</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>Prince really went above and beyond with this. even without any reference or good explanation for the design it still came out looking amazing along with the media kit all for a affordable price?! would highly recommend.</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+            <figure class="hcard rcard" data-book="lapsed-lease" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#4a0e16"><div class="b3-in"><img class="b3-front" src="../Assets/covers/lapsed-lease.webp" alt="Lapsed Lease cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of Lapsed Lease</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>Prince is great! He really take the time to understand what you are asking for and goes above and beyond to deliver a product that makes you stand out. He was patient, listened, and did an excellent job with revisions until I was 100% satisfied.</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+            <figure class="hcard rcard" data-book="cold-steel-mac" data-cursor="Read">
+              <div class="rv-top">
+                <div class="b3 b3--mini" style="--spine:#2b1346"><div class="b3-in"><img class="b3-front" src="../Assets/covers/cold-steel-mac.webp" alt="Cold Steel Mac cover" /><span class="b3-spine"><i></i></span><span class="b3-pages"></span><span class="b3-top"></span><span class="b3-bot"></span><span class="b3-back"></span></div></div>
+                <figcaption><b>Author of Cold Steel Mac</b><span>Fiverr review · 5.0</span></figcaption>
+              </div>
+              <blockquote>Delivered both the needed ebook and paperback files with an excellent eye for quality. This is definitely going to be one of my favorite covers and was worth the wait. Communication was straightforward and I was able to provide my input at several key points.</blockquote>
+              <span class="rv-more">Read full review</span>
+            </figure>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+
+      <section class="hpin" id="faq" aria-label="Questions and answers">
+        <div class="hstage">
+          <h2 class="h-title">Questions, answered</h2>
+          <div class="hview"><div class="htrack">
+            <article class="hcard"><i>01</i><h3>How does the design process work?</h3><p>Once you place an order, I start by reviewing your book details, genre, and references. Based on that, I create a rough sketch cover concept tailored to your story. After that once the basic idea is finished I move to color and depth for the cover and at last comes the title.</p></article>
+            <article class="hcard"><i>02</i><h3>How long will my cover take?</h3><p>Basic: 10 days, Standard: 14, Premium: 21. Days 1-2; I review your story and gather references. Then I send linework for your feedback, add base colors, then depth, highlights and background, and finish with the title. Need it sooner? Add Fast Delivery (7, 10 or 14 days).</p></article>
+            <article class="hcard"><i>03</i><h3>What information do I need to send before work starts?</h3><p>To begin smoothly, please share: book title and author name; genre and short summary of the story; trim size and page count (for print covers); any reference covers or style preferences (optional). The more details you provide, the better the final result will match your vision.</p></article>
+            <article class="hcard"><i>04</i><h3>What if I don’t like the result? How do revisions work?</h3><p>Revisions are included based on the package you choose. You can request changes to colors, typography, layout, or overall feel so the cover aligns better with your expectations. Revisions are meant to refine the approved concept, not to create an entirely new design from scratch.</p></article>
+            <article class="hcard"><i>05</i><h3>Can I send example covers or references?</h3><p>Absolutely. You’re welcome to share example covers, illustrations, or styles you like. References help me understand your expectations better and ensure the final design matches your vision and genre.</p></article>
+            <article class="hcard"><i>06</i><h3>What are source files, revisions, file formats, and 3D mockups?</h3><p>Source files are editable design files included in specific packages, allowing future edits. Revisions are the number of changes you can request. Final files are high-resolution, print-ready formats. 3D mockups are realistic previews for display or promotion.</p></article>
+            <article class="hcard"><i>07</i><h3>Can you match a specific art style?</h3><p>Yes. If you have reference images or examples, I'll use them as inspiration while creating a cover suited to your story.</p></article>
+            <article class="hcard"><i>08</i><h3>Will my cover fit Web-Novel, Royal Road or Tapas?</h3><p>Yes. Every cover is delivered in platform-ready dimensions suitable for digital publishing.</p></article>
+            <article class="hcard"><i>09</i><h3>What if I don't have a clear idea?</h3><p>That's completely fine. Tell me about your story, and I'll help develop a cover concept that matches its tone and genre, once we have it we can move forward and make that into an actual good cover</p></article>
+            <article class="hcard"><i>10</i><h3>Do you design series branding?</h3><p>Yes. I can keep typography, colors, and overall visual style consistent across multiple volumes.</p></article>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+
+      <section class="cta" id="order">
+        <canvas class="warp" aria-hidden="true"></canvas>
+        <h2 class="cta-title">Ready when your story is.</h2>
+        <p>Pick a package, or start your order right here.</p>
+        <div class="buttons">
+          <a class="contact" href="Pricing.html">See pricing</a>
+          <a class="cover" href="Order.html">Order now</a>
+        </div>
+      </section>
+    </main>
+    <div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-label="Cover details" aria-hidden="true">
+      <div class="zoom-backdrop" data-cursor="Close"></div>
+      <div class="zoom-book"></div>
+      <article class="zoom-info"></article>
+    </div>
+    <script src="../js/home.js"></script>
+    <script src="../js/books.js"></script>
+    <script src="../js/interactive.js"></script>
   </body>
 </html>

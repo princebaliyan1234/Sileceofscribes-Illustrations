@@ -1,0 +1,47 @@
+/* ===== SPACING SYSTEM for Home (load this file LAST, after story/interactive css) =====
+   Everything sits on a 4px / 8px scale. To make the whole page airier or tighter, change the tokens below. */
+:root{
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
+  --measure:60ch;          /* max line length for paragraphs (about 60 characters) */
+}
+
+/* ---- Navbar: bigger click areas, even gaps ---- */
+.center_pages{gap:var(--s6)}
+.center_pages a{padding:var(--s3) var(--s1)}
+.center_pages a::after{left:var(--s1);width:calc(100% - var(--s2));bottom:var(--s2)}
+.order{padding:var(--s3) var(--s5)}
+
+/* ---- Screen 1: hero. Headline -> text -> buttons get a clear order of gaps ---- */
+.clmn1{gap:var(--s5);padding:var(--s8)}
+.cnt1{max-width:var(--measure);line-height:1.7}
+.buttons{gap:var(--s4);margin-top:var(--s2)}
+.contact,.cover{padding:var(--s4) var(--s6)}
+
+/* ---- Screen 2: showcase ---- */
+.sc-stage{padding:var(--s5);gap:var(--s5)}
+.sc-main{gap:var(--s4)}
+.tile{padding:var(--s4)}
+.sc-panel{padding:var(--s5) 0;gap:var(--s5)}
+.sc-plus{width:80px;height:80px}
+.sc-arrows{gap:var(--s2)}
+.sc-arrows button{width:44px;height:44px}
+
+/* ---- Screens 3 + 4: authors and FAQ ---- */
+.hstage{padding:var(--s5);gap:var(--s5)}
+.hcard{gap:var(--s2);padding:clamp(24px,4vh,40px)}                 /* tight inside a card (8px): title + text read as one group */
+.hcard p{max-width:var(--measure)}
+.hcard figcaption{gap:var(--s1)}
+
+/* ---- Screen 5: buy ---- */
+.cta{gap:var(--s5);padding:var(--s7) var(--s5)}
+.cta p{max-width:var(--measure)}
+.cta .buttons{margin-top:var(--s2)}
+
+@media(max-width:800px){
+  .center_pages{gap:var(--s4)}
+  .clmn1{padding:var(--s6) var(--s5);gap:var(--s5)}
+  .sc-stage,.hstage{padding:var(--s5) var(--s4)}
+  .sc-panel{padding:var(--s4)}
+  .sc-plus{width:56px;height:56px}
+  .cta{padding:var(--s7) var(--s4)}
+}

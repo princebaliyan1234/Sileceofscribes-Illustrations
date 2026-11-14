@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>try{if(sessionStorage.getItem("arrive")){document.documentElement.classList.add("arriving");sessionStorage.removeItem("arrive")}}catch(e){}</script>
+    <title>Order | Silence of Scribes</title>
+    <meta name="description" content="Start an order for an illustrated book cover, character art, title art or author branding." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&family=Manrope:wght@400;500;600&family=Cinzel:wght@500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Basic-css.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/interactive.css" />
+    <link rel="stylesheet" href="../css/books.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/spacing.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <a class="Logo" href="Home.html" aria-label="Silence of Scribes, home"><img class="logo" src="../Assets/opt/Logo.webp" alt="Silence of Scribes" /></a>
+        <div class="center_pages">
+          <a href="Home.html">Home</a>
+          <a href="Portfolio.html">Portfolio</a>
+          <a href="Pricing.html">Pricing</a>
+          <a href="Trust.html">Trust</a>
+        </div>
+        <a class="order" href="Order.html" aria-current="page"><span class="o-long">Order a cover</span><span class="o-short">Order</span></a>
+      </nav>
+    </header>
+    <main class="order-page">
+      <section class="order-main" aria-label="Order form">
+        <div>
+          <p class="kicker">Order</p>
+          <h1 class="h-title">Start your order</h1>
+        </div>
+        <p class="demo-note" id="demo-note" hidden>Demo mode: orders are saved in this browser only until the order system is connected.</p>
+        <ol class="wiz-steps" id="steps" aria-label="Order steps"></ol>
+        <form id="wizard" novalidate>
+          <div class="wiz-panel" id="panel"></div>
+          <div class="wiz-nav" id="wiznav">
+            <button type="button" class="cover" id="back">Back</button>
+            <button type="submit" class="contact" id="next">Continue</button>
+          </div>
+        </form>
+      </section>
+      <aside class="order-summary" id="summary" aria-live="polite" aria-label="Order summary"></aside>
+    </main>
+    <script src="../js/order.js"></script>
+    <script src="../js/interactive.js"></script>
+  </body>
+</html>

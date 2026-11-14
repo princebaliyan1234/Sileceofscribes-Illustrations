@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>try{if(sessionStorage.getItem("arrive")){document.documentElement.classList.add("arriving");sessionStorage.removeItem("arrive")}}catch(e){}</script>
+    <title>Portfolio | Silence of Scribes</title>
+    <meta name="description" content="Illustrated book covers, character art, title lettering and author branding by Silence of Scribes." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&family=Manrope:wght@400;500;600&family=Cinzel:wght@500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Basic-css.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/interactive.css" />
+    <link rel="stylesheet" href="../css/books.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/spacing.css" />
+  </head>
+  <body class="pf">
+    <header class="navbar">
+      <nav>
+        <a class="Logo" href="Home.html" aria-label="Silence of Scribes, home"><img class="logo" src="../Assets/opt/Logo.webp" alt="Silence of Scribes" /></a>
+        <div class="center_pages">
+          <a href="Home.html">Home</a>
+          <a href="Portfolio.html" aria-current="page">Portfolio</a>
+          <a href="Pricing.html">Pricing</a>
+          <a href="Trust.html">Trust</a>
+        </div>
+        <a class="order" href="Order.html"><span class="o-long">Order a cover</span><span class="o-short">Order</span></a>
+      </nav>
+    </header>
+    <aside class="pf-rail" aria-label="Portfolio sections">
+      <button type="button" data-target="pf-covers" aria-current="true"><span class="thumb" style="--img:url(../Assets/covers/cold-steel-mac.webp)"></span>Covers</button>
+      <button type="button" data-target="pf-chars" aria-current="false"><span class="thumb" style="--img:url(../Assets/covers/cold-steel-mac.webp);--pos:90% 37%;--size:260%"></span>Character art</button>
+      <button type="button" data-target="pf-titles" aria-current="false"><span class="thumb" style="--img:url(../Assets/titles/cold-steel-mac.webp)"></span>Title art</button>
+      <button type="button" data-target="pf-extras" aria-current="false"><span class="thumb thumb--plus">+</span>Branding &amp; extras</button>
+    </aside>
+    <div class="pf-formats" role="group" aria-label="Format">
+      <button type="button" data-format="lightnovel" aria-pressed="true">Web &amp; light novel</button>
+      <button type="button" data-format="manhwa" aria-pressed="false" disabled title="Samples coming soon">Manhwa <small>soon</small></button>
+      <button type="button" data-format="wrap" aria-pressed="false" disabled title="Samples coming soon">Full wrap <small>soon</small></button>
+    </div>
+
+    <main>
+      <section class="hpin" id="pf-covers" aria-label="Covers">
+        <div class="hstage">
+          <div class="pf-head">
+            <h2 class="h-title">Covers</h2>
+            <p class="panel-copy">Illustrated covers for web novels and light novels. Click a cover to look closer.</p>
+          </div>
+          <div class="hview"><div class="htrack">
+            <figure class="pcard" data-open-book="talentless-perspective" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/talentless-perspective.webp" alt="Talentless Perspective cover" loading="lazy" /></span><figcaption><b>Talentless Perspective</b><span>by Bobby1z</span></figcaption></figure>
+            <figure class="pcard" data-open-book="cold-steel-mac" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/cold-steel-mac.webp" alt="Cold Steel Mac cover" loading="lazy" /></span><figcaption><b>Cold Steel Mac</b><span>by Alistair MacAoigh</span></figcaption></figure>
+            <figure class="pcard" data-open-book="lapsed-lease" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/lapsed-lease.webp" alt="Lapsed Lease cover" loading="lazy" /></span><figcaption><b>Lapsed Lease</b><span>by RJ Verret</span></figcaption></figure>
+            <figure class="pcard" data-open-book="first-date-oblivion" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/first-date-oblivion.webp" alt="First Date: Oblivion cover" loading="lazy" /></span><figcaption><b>First Date: Oblivion</b><span>by Bryce Garrison</span></figcaption></figure>
+            <figure class="pcard" data-open-book="soldier-system" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/soldier-system.webp" alt="Soldier System cover" loading="lazy" /></span><figcaption><b>Soldier System</b><span>Full cover + title lettering</span></figcaption></figure>
+            <figure class="pcard" data-open-book="pirate-archmage-pee-za-sauce" data-cursor="Open" tabindex="0" role="button"><span class="bkc"><img src="../Assets/covers/pirate-archmage-pee-za-sauce.webp" alt="Pirate Archmage Pee Za Sauce cover" loading="lazy" /></span><figcaption><b>Pirate Archmage Pee Za Sauce</b><span>Quest for the God Pizza</span></figcaption></figure>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+
+      <section class="hpin" id="pf-chars" aria-label="Character art">
+        <div class="hstage hstage--panels">
+          <div class="hview"><div class="htrack" style="--v:1">
+            <div class="panel" data-ghost="Characters">
+              <div class="panel-head">
+                <p class="panel-kicker">Portfolio</p>
+                <h2 class="h-title">Character art</h2>
+                <p class="panel-copy">Full-colour characters drawn to sit naturally with your cover art and your story’s world.</p>
+                <p class="panel-hint">Hover a card and the character steps out</p>
+                <a class="panel-link" href="Order.html?type=character">Order character art <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="cards">
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page3.webp);--art:url(../Assets/covers/cold-steel-mac.webp);--pos:90% 37%;--zoom:220%"><div class="c-art" role="img" aria-label="Character from Cold Steel Mac"></div><figcaption>Cold Steel Mac</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page4.webp);--art:url(../Assets/covers/talentless-perspective.webp);--pos:54% 32%;--zoom:190%"><div class="c-art" role="img" aria-label="Character from Talentless Perspective"></div><figcaption>Talentless Perspective</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page5.webp);--art:url(../Assets/covers/lapsed-lease.webp);--pos:0% 59%;--zoom:200%"><div class="c-art" role="img" aria-label="Character from Lapsed Lease"></div><figcaption>Lapsed Lease</figcaption></figure>
+                <figure class="ccard" data-cursor-hover style="--bg:url(../Assets/opt/page2.webp);--art:url(../Assets/covers/first-date-oblivion.webp);--pos:50% 15%;--zoom:200%"><div class="c-art" role="img" aria-label="Character from First Date: Oblivion"></div><figcaption>First Date: Oblivion</figcaption></figure>
+              </div>
+            </div>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+
+      <section class="hpin" id="pf-titles" aria-label="Title art">
+        <div class="hstage hstage--panels">
+          <div class="hview"><div class="htrack" style="--v:1">
+            <div class="panel" data-ghost="Typography">
+              <div class="panel-head">
+                <p class="panel-kicker">Portfolio</p>
+                <h2 class="h-title">Title art</h2>
+                <p class="panel-copy">Title lettering built around your genre and your cover’s colours, and kept consistent across a series.</p>
+                <p class="panel-hint">Click a title to open it</p>
+                <a class="panel-link" href="Order.html?type=title">Order title art <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="cards cards--type">
+                <figure class="tcard" data-title="cold-steel-mac" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/cold-steel-mac.webp" alt="Cold Steel Mac title lettering" loading="lazy" /><figcaption>Cold Steel Mac</figcaption></figure>
+                <figure class="tcard" data-title="talentless-perspective" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/talentless-perspective.webp" alt="Talentless Perspective title lettering" loading="lazy" /><figcaption>Talentless Perspective</figcaption></figure>
+                <figure class="tcard" data-title="lapsed-lease" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/lapsed-lease.webp" alt="Lapsed Lease title lettering" loading="lazy" /><figcaption>Lapsed Lease</figcaption></figure>
+                <figure class="tcard" data-title="first-date-oblivion" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/first-date-oblivion.webp" alt="First Date: Oblivion title lettering" loading="lazy" /><figcaption>First Date: Oblivion</figcaption></figure>
+                <figure class="tcard" data-title="soldier-system" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/soldier-system.webp" alt="Soldier System title lettering" loading="lazy" /><figcaption>Soldier System</figcaption></figure>
+                <figure class="tcard" data-title="pirate-archmage-pee-za-sauce" data-cursor="Open" tabindex="0" role="button"><img src="../Assets/titles/pirate-archmage-pee-za-sauce.webp" alt="Pirate Archmage Pee Za Sauce title lettering" loading="lazy" /><figcaption>Pirate Archmage Pee Za Sauce</figcaption></figure>
+              </div>
+            </div>
+          </div></div>
+          <div class="hbar"><i></i></div>
+        </div>
+        <div class="hsteps" aria-hidden="true"></div>
+      </section>
+
+      <section class="pg-screen" id="pf-extras" aria-label="Branding and extras">
+        <div class="pg-head">
+          <p class="panel-kicker">Portfolio</p>
+          <h2 class="h-title">Branding &amp; extras</h2>
+          <p class="panel-copy">Everything around the cover that makes a book feel finished.</p>
+          <p class="ex-note">Samples are on the way. Ask about any of these and you’ll get a quote.</p>
+        </div>
+        <div class="ex-grid">
+            <a class="ex-card" href="Order.html?type=extras&item=icons"><b>Icons</b><p>Small square art for your profile, series or social pages.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=banners"><b>Banners</b><p>Promo banners and header images for your story pages and socials.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=reference-sheet"><b>Reference sheets</b><p>A character sheet that keeps every volume consistent.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=bookmark"><b>Bookmarks</b><p>Printable bookmarks that carry your cover art.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=box-set"><b>Box sets</b><p>A shared cover for a boxed collection of your series.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=author-logo"><b>Author logo</b><p>A mark for your pen name, ready for covers and your site.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=author-website"><b>Author website</b><p>A simple site for you and your books.</p><span>Ask about this →</span></a>
+            <a class="ex-card" href="Order.html?type=extras&item=author-branding"><b>Author branding</b><p>Logo, colours and graphics that make your books feel like one world.</p><span>Ask about this →</span></a>
+        </div>
+      </section>
+
+      <section class="cta" id="pf-order">
+        <canvas class="warp" aria-hidden="true"></canvas>
+        <h2 class="cta-title">Found your style?</h2>
+        <p>See what each package includes, or start your order right here.</p>
+        <div class="buttons">
+          <a class="contact" href="Order.html">Order now</a>
+          <a class="cover" href="Pricing.html">See pricing</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-label="Details" aria-hidden="true">
+      <div class="zoom-backdrop" data-cursor="Close"></div>
+      <div class="zoom-book"></div>
+      <article class="zoom-info"></article>
+    </div>
+    <script src="../js/home.js"></script>
+    <script src="../js/books.js"></script>
+    <script src="../js/interactive.js"></script>
+    <script src="../js/portfolio.js"></script>
+  </body>
+</html>
